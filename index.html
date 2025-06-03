@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
   <title>Product CRUD</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1>Product CRUD</h1>
 
@@ -16,12 +19,22 @@
     <button type="submit">Add</button>
   </form>
 
+  <form id="update-product-form">
+    <h2>Update Product</h2>
+    <input type="hidden" id="update-id" name="id">
+    <label for="update-name">Name:</label>
+    <input type="text" id="update-name" name="name" required>
+    <label for="update-price">Price:</label>
+    <input type="number" id="update-price" name="price" required step="0.01">
+    <button type="submit">Update</button>
+  </form>
+
   <ul id="products"></ul>
 
   <script src="app.js"></script>
   <script>
-    // Call fetchProducts() when the page loads
     window.addEventListener('load', fetchProducts);
   </script>
 </body>
+
 </html>
