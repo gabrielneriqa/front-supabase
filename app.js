@@ -6,7 +6,7 @@ const updateProductName = document.querySelector("#update-name");
 const updateProductPrice = document.querySelector("#update-price");
 
 async function fetchProducts() {
-  const response = await fetch("http://172.31.47.183:3000/products");
+  const response = await fetch("http://18.231.215.67:3000/products");
   const products = await response.json();
 
   productList.innerHTML = "";
@@ -56,7 +56,7 @@ updateProductForm.addEventListener("submit", async (event) => {
 });
 
 async function addProduct(name, price) {
-  const response = await fetch("http://172.31.47.183:3000/products", {
+  const response = await fetch("http://18.231.215.67:3000/products", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -67,7 +67,7 @@ async function addProduct(name, price) {
 }
 
 async function updateProduct(id, name, price) {
-  const response = await fetch(`http://172.31.47.183:3000/products/${id}`, {
+  const response = await fetch(`http://18.231.215.67:3000/products/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -78,7 +78,7 @@ async function updateProduct(id, name, price) {
 }
 
 async function deleteProduct(id) {
-  const response = await fetch(`http://172.31.47.183:3000/products/${id}`, {
+  const response = await fetch(`http://18.231.215.67:3000/products/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
